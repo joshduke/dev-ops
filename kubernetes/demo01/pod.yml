@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: user-api
+  labels:
+    name: userapi
+spec:
+  containers:
+  - name: user-api-container
+    image: joshduke/demo-image:1.0
+    ports:
+      - containerPort: 8080

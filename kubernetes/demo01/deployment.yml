@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: userapi-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      name: userapi
+  template:
+    metadata:
+      labels:
+        name: userapi
+    spec:
+      containers:
+      - name: userapi-img
+        image: joshduke/demo-image:1.0
+        ports:
+        - containerPort: 8080
