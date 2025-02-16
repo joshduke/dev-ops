@@ -12,9 +12,11 @@ But if we have any username or password, we need to connect using those credenti
 
 Below command to connect to my local instance (running within the docker container) 
 
+```shell
 docker exec -it <mongodo_containerId> /bin/bash
 
 mongosh "mongodb://localhost:27017" --username admin --password password --authenticationDatabase admin
+```
 
 These above commands helped me to login to MongoDB container, and also start a MongoShell and connect to the MongoDB running in local. Set to do hand-on practice with the Mongo queries.
 
